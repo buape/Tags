@@ -1,0 +1,21 @@
+{
+  "name": "Buape Tags",
+  "description": "🏷️ Tags allows for servers to answer the most frequent questions easier.",
+  "repository": "https://github.com/Buape/Tags",
+  "logo": "https://cdn.discordapp.com/attachments/1132776820345929758/1188984983067566150/BuapeTags.png",
+  "scripts": {
+    "postdeploy": "npx slash-up sync"
+  },
+  "env": {
+    "DISCORD_APP_ID": {
+      "description": "The application ID of the Discord app"
+    },
+    "DISCORD_PUBLIC_KEY": {
+      "description": "The public key of the Discord app"
+    },
+    "DISCORD_BOT_TOKEN": {
+      "description": "The bot token of the Discord app"
+    }
+  },
+  "keywords": ["buape", "slash-create", "discord.js", "tags", "slash-commands"]
+}

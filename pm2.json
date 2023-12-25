@@ -1,0 +1,9 @@
+{
+  "apps": [
+    {
+      "name": "buape-tags",
+			"script": "node",
+			"args": "dist/index.js"
+    }
+  ]
+}

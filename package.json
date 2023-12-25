@@ -1,0 +1,38 @@
+{
+  "name": "buape-tags",
+  "version": "1.0.0",
+  "description": "🏷️ Tags allows for servers to answer the most frequent questions easier",
+  "author": "Codeize",
+  "main": "dist/index.js",
+  "scripts": {
+    "sync": "slash-up sync",
+    "sync:dev": "slash-up sync -e development",
+    "start": "cd dist && node index.js",
+    "build": "npx tsc",
+    "dev": "npx tsc && slash-up sync && node dist/index.js",
+    "lint": "npx eslint --ext .ts ./src",
+    "lint:fix": "npx eslint --ext .ts ./src --fix"
+  },
+  "dependencies": {
+    "@prisma/client": "5.7.1",
+    "cat-loggr": "^1.2.2",
+    "discord.js": "^14.14.1",
+    "dotenv": "^8.6.0",
+    "fastify": "^3.29.5",
+    "slash-create": "^5.14.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^14.18.63",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "prettier": "^2.8.8",
+    "prisma": "5.7.1",
+    "slash-up": "^1.4.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^5.3.3"
+  }
+}
