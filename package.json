@@ -8,7 +8,7 @@
     "sync": "slash-up sync",
     "sync:dev": "slash-up sync -e development",
     "start": "cd dist && node index.js",
-    "build": "npx tsc",
+    "build": "npx tsc && prisma generate",
     "dev": "npx tsc && slash-up sync && node dist/index.js",
     "lint": "npx eslint --ext .ts ./src",
     "lint:fix": "npx eslint --ext .ts ./src --fix"
