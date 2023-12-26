@@ -92,7 +92,7 @@ export default class CreateTagCommand extends SlashCommand {
     }
 
     return ctx.send({
-      content: `Tag created! You can use it with </send-tag:1188955094847324191>`,
+      content: `Tag created! Here is what it looks like:\n-**Trigger**: \`${createdTag.trigger}\`\n-**Content**:\n${createdTag.content}`,
       ephemeral: true
     });
   }

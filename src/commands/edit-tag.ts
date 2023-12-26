@@ -95,7 +95,7 @@ export default class EditTagCommand extends SlashCommand {
     }
 
     return ctx.send({
-      content: `Tag edited! You can use it with </send-tag:1188955094847324191>`,
+      content: `Tag edited! Here is what it looks like:\n-**Trigger**: \`${editedTag.trigger}\`\n-**Content**:\n${editedTag.content}`,
       ephemeral: true
     });
   }
