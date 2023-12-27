@@ -94,7 +94,7 @@ export default class EditTagCommand extends SlashCommand {
       });
     }
 
-    const editedTag = await editTag(tagId, trigger, content);
+    const editedTag = await editTag(tagId, ctx.user.id, trigger, content);
     if (!editedTag) {
       return ctx.send({
         content: 'Something went wrong!',
@@ -109,7 +109,7 @@ export default class EditTagCommand extends SlashCommand {
   }
 
   async autocomplete(ctx: AutocompleteContext) {
-    const allTags = await getAllTags();
+    const allTags = await getAllTags(ctx.guildID);
     const tag = allTags
       .map((tag) => ({
         name: tag.trigger,

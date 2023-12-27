@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import { SlashCreator, FastifyServer } from 'slash-create';
 import path from 'path';
 import CatLoggr from 'cat-loggr/ts';
+import { db } from './db';
 
 let dotenvPath = path.join(process.cwd(), '.env');
 if (path.parse(process.cwd()).name === 'dist') dotenvPath = path.join(process.cwd(), '..', '.env');
@@ -21,9 +22,31 @@ creator.on('debug', (message) => logger.log(message));
 creator.on('warn', (message) => logger.warn(message));
 creator.on('error', (error) => logger.error(error));
 creator.on('synced', () => logger.info('Commands synced!'));
-creator.on('commandRun', (command, _, ctx) =>
-  logger.info(`${ctx.user.username} (${ctx.user.id}) ran command ${command.commandName}`)
-);
+creator.on('commandRun', async (command, _, ctx) => {
+  await db.guild.upsert({
+    where: {
+      id: ctx.guildID
+    },
+    create: {
+      id: ctx.guildID
+    },
+    update: {
+      id: ctx.guildID
+    }
+  });
+  await db.user.upsert({
+    where: {
+      id: ctx.user.id
+    },
+    create: {
+      id: ctx.user.id
+    },
+    update: {
+      id: ctx.user.id
+    }
+  });
+  logger.info(`${ctx.user.username} (${ctx.user.id}) ran command ${command.commandName}`);
+});
 creator.on('commandRegister', (command) => logger.info(`Registered command ${command.commandName}`));
 creator.on('commandError', (command, error) => logger.error(`Command ${command.commandName}:`, error));
 

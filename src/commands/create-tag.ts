@@ -93,7 +93,7 @@ export default class CreateTagCommand extends SlashCommand {
       });
     }
 
-    const createdTag = await createTag(trigger, content);
+    const createdTag = await createTag(ctx.guildID, ctx.user.id, trigger, content);
     if (!createdTag) {
       return ctx.send({
         content: 'Something went wrong!',

@@ -7,11 +7,39 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Guild {
+  id        String   @id
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  tags      Tag[]
+}
+
+model User {
+  id        String   @id
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  tags      Tag[]
+  lastEditedTags Tag[] @relation("LastEditedBy")
+}
+
 model Tag {
   id        String   @id @default(uuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  guild    Guild  @relation(fields: [guildId], references: [id])
+  guildId  String
+
+  author     User   @relation(fields: [authorId], references: [id])
+  authorId   String
+
   trigger String
   content String
   uses    Int    @default(0)
+  lastUsed DateTime?
+  lastEditedBy User? @relation(fields: [lastEditedById], references: [id], name: "LastEditedBy")
+  lastEditedById String?
+  lastEditedAt DateTime?
 }

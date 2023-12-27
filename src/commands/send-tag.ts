@@ -48,7 +48,7 @@ export default class SendTagCommand extends SlashCommand {
   }
 
   async autocomplete(ctx: AutocompleteContext) {
-    const allTags = await getAllTags();
+    const allTags = await getAllTags(ctx.guildID);
     const tag = allTags
       .map((tag) => ({
         name: tag.trigger,
