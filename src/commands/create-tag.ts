@@ -12,15 +12,24 @@ export default class CreateTagCommand extends SlashCommand {
   constructor(creator: SlashCreator) {
     super(creator, {
       name: 'create-tag',
-      description: 'Create a tag'
+      description: 'Create a tag',
+      options: [
+        {
+          type: 5,
+          name: 'private',
+          description: 'Whether or not to reply privately',
+          required: false
+        }
+      ]
     });
   }
 
   async run(ctx: CommandContext) {
+    const privateReply = ctx.options.private ?? false;
     await ctx.sendModal(
       {
         title: 'Create Tag',
-        custom_id: `createTag`,
+        custom_id: `createTag:${privateReply ? 'true' : ''}`,
         components: [
           {
             type: ComponentType.ACTION_ROW,
@@ -55,6 +64,7 @@ export default class CreateTagCommand extends SlashCommand {
   }
 
   async handleModal(ctx: ModalInteractionContext) {
+    const isPrivate = ctx.customID.split(':')[1] === 'true';
     const trigger = ctx.values.triggerInput;
     const content = ctx.values.contentInput;
 
@@ -93,7 +103,7 @@ export default class CreateTagCommand extends SlashCommand {
 
     return ctx.send({
       content: `Tag created! Here is what it looks like:\n-**Trigger**: \`${createdTag.trigger}\`\n-**Content**:\n${createdTag.content}`,
-      ephemeral: true
+      ephemeral: isPrivate
     });
   }
 }

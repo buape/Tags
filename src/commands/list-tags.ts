@@ -6,11 +6,21 @@ export default class ListTagsCommand extends SlashCommand {
   constructor(creator: SlashCreator) {
     super(creator, {
       name: 'list-tags',
-      description: 'List tags'
+      description: 'List tags',
+      options: [
+        {
+          type: 5,
+          name: 'private',
+          description: 'Whether or not to reply privately',
+          required: false
+        }
+      ]
     });
   }
 
   async run(ctx: CommandContext) {
+    const privateReply = ctx.options.private ?? false;
+
     const tags = await getAllTags();
     if (!tags || tags.length === 0) {
       return ctx.send({
@@ -24,7 +34,8 @@ export default class ListTagsCommand extends SlashCommand {
 
     return ctx.send({
       // Hacky fix to make the embed work with slash-create
-      embeds: [embed as any]
+      embeds: [embed as any],
+      ephemeral: privateReply
     });
   }
 

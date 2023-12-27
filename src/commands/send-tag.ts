@@ -18,12 +18,19 @@ export default class SendTagCommand extends SlashCommand {
           type: 6,
           name: 'user',
           description: 'The user to mention'
+        },
+        {
+          type: 5,
+          name: 'private',
+          description: 'Whether or not to reply privately',
+          required: false
         }
       ]
     });
   }
 
   async run(ctx: CommandContext) {
+    const privateReply = ctx.options.private ?? false;
     const tag = await getTag(ctx.options.tag);
     if (!tag) {
       return ctx.send({
@@ -35,7 +42,8 @@ export default class SendTagCommand extends SlashCommand {
     await incrementTagUses(tag.id);
 
     return ctx.send({
-      content: `${ctx.options.user ? `<@${ctx.options.user.toString()}>,\n\n` : ''}${tag.content}`
+      content: `${ctx.options.user ? `<@${ctx.options.user.toString()}>,\n\n` : ''}${tag.content}`,
+      ephemeral: privateReply
     });
   }
 

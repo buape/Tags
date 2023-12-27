@@ -21,17 +21,24 @@ export default class EditTagCommand extends SlashCommand {
           description: 'The tag to send',
           autocomplete: true,
           required: true
+        },
+        {
+          type: 5,
+          name: 'private',
+          description: 'Whether or not to reply privately',
+          required: false
         }
       ]
     });
   }
 
   async run(ctx: CommandContext) {
+    const privateReply = ctx.options.private ?? false;
     const tag = await getTag(ctx.options.tag);
     await ctx.sendModal(
       {
         title: 'Edit Tag',
-        custom_id: `editTag:${tag.id}`,
+        custom_id: `editTag:${tag.id}:${privateReply ? 'true' : ''}`,
         components: [
           {
             type: ComponentType.ACTION_ROW,
@@ -67,6 +74,7 @@ export default class EditTagCommand extends SlashCommand {
 
   async handleModal(ctx: ModalInteractionContext) {
     const tagId = ctx.customID.split(':')[1];
+    const isPrivate = ctx.customID.split(':')[2] === 'true';
     const trigger = ctx.values.triggerInput;
     const content = ctx.values.contentInput;
 
@@ -96,7 +104,7 @@ export default class EditTagCommand extends SlashCommand {
 
     return ctx.send({
       content: `Tag edited! Here is what it looks like:\n-**Trigger**: \`${editedTag.trigger}\`\n-**Content**:\n${editedTag.content}`,
-      ephemeral: true
+      ephemeral: isPrivate
     });
   }
 

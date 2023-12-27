@@ -13,12 +13,19 @@ export default class DeleteTagCommand extends SlashCommand {
           description: 'The tag to delete',
           autocomplete: true,
           required: true
+        },
+        {
+          type: 5,
+          name: 'private',
+          description: 'Whether or not to reply privately',
+          required: false
         }
       ]
     });
   }
 
   async run(ctx: CommandContext) {
+    const privateReply = ctx.options.private ?? false;
     const tag = await getTag(ctx.options.tag);
     if (!tag) {
       return ctx.send({
@@ -31,7 +38,7 @@ export default class DeleteTagCommand extends SlashCommand {
 
     return ctx.send({
       content: `Tag deleted!`,
-      ephemeral: true
+      ephemeral: privateReply
     });
   }
 
