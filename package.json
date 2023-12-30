@@ -10,6 +10,7 @@
     "start": "cd dist && node index.js",
     "build": "npx tsc && prisma generate",
     "dev": "npx tsc && slash-up sync && node dist/index.js",
+    "db:push": "prisma db push",
     "lint": "npx eslint --ext .ts ./src",
     "lint:fix": "npx eslint --ext .ts ./src --fix"
   },
