@@ -8,7 +8,7 @@
     "sync": "slash-up sync",
     "sync:dev": "slash-up sync -e development",
     "start": "cd dist && node index.js",
-    "build": "npx tsc && prisma generate",
+    "build": "prisma generate && npx tsc",
     "dev": "npx tsc && slash-up sync && node dist/index.js",
     "db:push": "prisma db push",
     "lint": "npx eslint --ext .ts ./src",
