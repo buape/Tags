@@ -19,7 +19,7 @@
     "cat-loggr": "^1.2.2",
     "discord.js": "^14.14.1",
     "dotenv": "^8.6.0",
-    "fastify": "^3.29.5",
+    "fastify": "^5.0.0",
     "slash-create": "^5.14.0"
   },
   "devDependencies": {
