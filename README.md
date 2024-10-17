@@ -54,7 +54,7 @@ Right now the bot is pretty simple to setup and run. You'll need to have the fol
 
 ### Hosting
 
-For the sake of transparency, the [public version of Tags](https://go.buape.com/tags) is hosted on [Hop.io](https://hop.io) but you can host it anywhere you want.
+For the sake of transparency, the [public version of Tags](https://go.buape.com/tags) is hosted on [Dokploy](https://dokploy.com) running on a [Hetzner VPS](https://hetzner.cloud/?ref=nkWxpvjI9Ujo) but you can host it anywhere you want.
 
 The main thing to keep in mind is that once your application is hosted on a public URL, you'll need to add it to the [Interactions Endpoint URL](https://discord.com/developers/docs/tutorials/upgrading-to-application-commands#adding-an-interactions-endpoint-url) in the Discord Developer Portal.
 
@@ -66,4 +66,4 @@ This project is licensed under the [MIT License](https://choosealicense.com/lice
 
 No additional permissions are required for the bot to run, other than the base Send Messages permission.
 
-If you have any questions, or similarly if you find any issues with the bot, feel free to [create an issue](https://github.com/Buape/Tags/issues/new) or join the [Buape Discord Server](https://go.buape.com/discord).
+If you have any questions, or similarly if you find any issues with the bot, feel free to [create an issue](https://github.com/Buape/Tags/issues/new) or join the [Buape Discord Server](https://discord.gg/MeqRREwCZv).
