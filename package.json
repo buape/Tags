@@ -15,7 +15,7 @@
     "lint:fix": "npx eslint --ext .ts ./src --fix"
   },
   "dependencies": {
-    "@prisma/client": "5.7.1",
+    "@prisma/client": "6.4.1",
     "cat-loggr": "^1.2.2",
     "discord.js": "^14.14.1",
     "dotenv": "^8.6.0",
