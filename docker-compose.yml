@@ -1,0 +1,21 @@
+services:
+  tags:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - DISCORD_APP_ID=${DISCORD_APP_ID}
+      - DISCORD_PUBLIC_KEY=${DISCORD_PUBLIC_KEY}
+      - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
+      - PORT=8020
+    networks:
+      - caddy
+    labels:
+      caddy_0: tags.b1.buape.com
+      caddy_0.reverse_proxy: "{{upstreams 8020}}"
+
+networks:
+  caddy:
+    external: true
