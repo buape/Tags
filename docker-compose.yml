@@ -18,7 +18,7 @@ services:
       caddy_0.reverse_proxy: "{{upstreams 8020}}"
 
   db:
-    image: postgres
+    image: postgres:17
     restart: always
     shm_size: 256mb
     environment:
