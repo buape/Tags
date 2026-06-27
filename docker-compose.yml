@@ -12,10 +12,30 @@ services:
       - PORT=8020
     networks:
       - caddy
+      - tags
     labels:
       caddy_0: tags.b1.buape.com
       caddy_0.reverse_proxy: "{{upstreams 8020}}"
 
+  db:
+    environment:
+      POSTGRES_DB: tags
+      POSTGRES_PASSWORD: ${PG_PASS}
+      POSTGRES_USER: tags
+    ports:
+      - 42003:5432
+    image: docker.io/library/postgres:16-alpine
+    restart: unless-stopped
+    networks:
+      - tags
+    volumes:
+    - database:/var/lib/postgresql/data
+
 networks:
+  tags:
   caddy:
     external: true
+
+volumes:
+  database:
+    driver: local
