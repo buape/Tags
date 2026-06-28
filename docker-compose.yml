@@ -1,8 +1,7 @@
 services:
   tags:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/buape/tags:latest
+    pull_policy: always
     restart: unless-stopped
     environment:
       - DATABASE_URL=${DATABASE_URL}
