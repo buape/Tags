@@ -1,8 +1,13 @@
 FROM node:20-alpine
 
+ARG PNPM_VERSION=8.15.9
+ARG PRISMA_CLI_BINARY_TARGETS=linux-musl-openssl-3.0.x
+
+ENV PRISMA_CLI_BINARY_TARGETS=$PRISMA_CLI_BINARY_TARGETS
+
 RUN apk add --no-cache openssl
 
-RUN npm install -g pnpm@8.15.9
+RUN npm install -g "pnpm@${PNPM_VERSION}"
 
 WORKDIR /app
 
