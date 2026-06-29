@@ -1,4 +1,4 @@
-FROM node:20-alpine
+FROM node:24-alpine
 
 ARG PNPM_VERSION=8.15.9
 ARG PRISMA_CLI_BINARY_TARGETS=linux-musl-openssl-3.0.x
