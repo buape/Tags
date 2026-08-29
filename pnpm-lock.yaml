@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@prisma/client':
-    specifier: 5.7.1
-    version: 5.7.1(prisma@5.7.1)
+    specifier: 7.10.0
+    version: 7.10.0(prisma@5.7.1)(typescript@5.3.3)
   cat-loggr:
     specifier: ^1.2.2
     version: 1.2.2
@@ -449,17 +449,25 @@ packages:
       fastq: 1.16.0
     dev: true
 
-  /@prisma/client@5.7.1(prisma@5.7.1):
-    resolution: {integrity: sha512-TUSa4nUcC4nf/e7X3jyO1pEd6XcI/TLRCA0KjkA46RDIpxUaRsBYEOqITwXRW2c0bMFyKcCRXrH4f7h4q9oOlg==}
-    engines: {node: '>=16.13'}
-    requiresBuild: true
+  /@prisma/client-runtime-utils@7.10.0:
+    resolution: {integrity: sha512-cnCy7lUV8/CctgKVEmqAbSLAmwqJdE/qAlqTBk/0NDk59zEb2cZ0M0M0E4vVPnqbSEYudRroQDvOWfUZH6RIfw==}
+    dev: false
+
+  /@prisma/client@7.10.0(prisma@5.7.1)(typescript@5.3.3):
+    resolution: {integrity: sha512-Ubw/QS9JGIBSBUsyxAUQuK/Jcu0Tsva7le7QbLd91Kix9yJvYDdj5QkwgEbbZniH80dd+sziQcALPc+HnvQC8Q==}
+    engines: {node: ^20.19 || ^22.12 || >=24.0}
     peerDependencies:
       prisma: '*'
+      typescript: '>=5.4.0'
     peerDependenciesMeta:
       prisma:
         optional: true
+      typescript:
+        optional: true
     dependencies:
+      '@prisma/client-runtime-utils': 7.10.0
       prisma: 5.7.1
+      typescript: 5.3.3
     dev: false
 
   /@prisma/debug@5.7.1:
@@ -2035,7 +2043,6 @@ packages:
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
     engines: {node: '>=14.17'}
     hasBin: true
-    dev: true
 
   /undici@5.27.2:
     resolution: {integrity: sha512-iS857PdOEy/y3wlM3yRp+6SNQQ6xU0mmZcwRSriqk+et/cwWAtwmIGf6WkoDN2EK/AMdCO/dfXzIwi+rFMrjjQ==}
