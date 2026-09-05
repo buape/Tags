@@ -21,8 +21,8 @@ dependencies:
     specifier: ^3.29.5
     version: 3.29.5
   slash-create:
-    specifier: ^5.14.0
-    version: 5.14.0(fastify@3.29.5)
+    specifier: ^7.0.0
+    version: 7.0.0(fastify@3.29.5)
 
 devDependencies:
   '@types/express':
@@ -959,6 +959,11 @@ packages:
     hasBin: true
     dev: true
 
+  /dequal@2.0.3:
+    resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
+    engines: {node: '>=6'}
+    dev: false
+
   /diff@4.0.2:
     resolution: {integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==}
     engines: {node: '>=0.3.1'}
@@ -1543,6 +1548,7 @@ packages:
 
   /lodash.isequal@4.5.0:
     resolution: {integrity: sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==}
+    dev: true
 
   /lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
@@ -1825,24 +1831,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /slash-create@5.14.0(fastify@3.29.5):
-    resolution: {integrity: sha512-V+Zcvs2a9e3obm+zrWw3jr8HcoX5Jtj6cI1ByT0/henOTdEsfh1roOLLhLiLxo80poBZfkLcy3fnn5hTAwF59g==}
-    engines: {node: '>=14'}
-    peerDependencies:
-      express: ^4
-      fastify: ^3 || ^4
-    peerDependenciesMeta:
-      express:
-        optional: true
-      fastify:
-        optional: true
-    dependencies:
-      eventemitter3: 5.0.1
-      fastify: 3.29.5
-      lodash.isequal: 4.5.0
-      tweetnacl: 1.0.3
-    dev: false
-
   /slash-create@6.0.2(fastify@3.29.5):
     resolution: {integrity: sha512-V2gqs7Ov3C8hjS2aODwzGUM/4WqpRiNXSPh69Bk3soyL7Kvkc/75HfwOgz9fTNNU+H/u5EMtvjR4hJgey0HKHA==}
     engines: {node: '>=16'}
@@ -1861,6 +1849,25 @@ packages:
       tweetnacl: 1.0.3
       undici: 5.28.2
     dev: true
+
+  /slash-create@7.0.0(fastify@3.29.5):
+    resolution: {integrity: sha512-w80Os5k53ZW2xZYsumxJeV+56mohje5Ujg8eqcRRcnF9NBksfYTS4PbXZGwhnd6CPE5jTEf1+K1X1XqUB/3z8w==}
+    engines: {node: '>=18.17'}
+    peerDependencies:
+      express: ^4
+      fastify: ^3 || ^4
+    peerDependenciesMeta:
+      express:
+        optional: true
+      fastify:
+        optional: true
+    dependencies:
+      dequal: 2.0.3
+      eventemitter3: 5.0.1
+      fastify: 3.29.5
+      tweetnacl: 1.0.3
+      undici: 6.28.1
+    dev: false
 
   /slash-up@1.4.2(fastify@3.29.5):
     resolution: {integrity: sha512-Ppm+sJ8eA+sZK58aQu4Pmlpbyo/LvIaQDCO5dp0zWnHS4dmAHgsrgWhJocNePkqbXGtPHLSOL7+BFwwKWHitfg==}
@@ -2050,6 +2057,11 @@ packages:
     dependencies:
       '@fastify/busboy': 2.1.0
     dev: true
+
+  /undici@6.28.1:
+    resolution: {integrity: sha512-zWpdTVD54H48CIybL0rWQ3ukpb9d23wM7eH5RtfdmeP70cWHNjtfo7P4vZX+5CoDcO53J4Pu5uXp7lNfjc6DRA==}
+    engines: {node: '>=18.17'}
+    dev: false
 
   /uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
