@@ -15,8 +15,8 @@ dependencies:
     specifier: ^14.14.1
     version: 14.14.1
   dotenv:
-    specifier: ^8.6.0
-    version: 8.6.0
+    specifier: ^18.0.0
+    version: 18.0.1
   fastify:
     specifier: ^3.29.5
     version: 3.29.5
@@ -1010,9 +1010,10 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /dotenv@8.6.0:
-    resolution: {integrity: sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==}
-    engines: {node: '>=10'}
+  /dotenv@18.0.1:
+    resolution: {integrity: sha512-0eR4m4D/jH5eaI3evo2ZqqMii5mrTCR12v12VChdie6O1gPHs7XAjzTep0CWc1Bd+oNx3vVfbi734dK4zghigw==}
+    engines: {node: '>=12'}
+    hasBin: true
     dev: false
 
   /emoji-regex@8.0.0:
