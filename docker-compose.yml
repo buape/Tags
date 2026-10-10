@@ -23,7 +23,7 @@ services:
       POSTGRES_USER: tags
     ports:
       - 42003:5432
-    image: docker.io/library/postgres:16-alpine
+    image: docker.io/library/postgres:18-alpine
     restart: unless-stopped
     networks:
       - tags
