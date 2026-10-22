@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@prisma/client':
-    specifier: 5.7.1
-    version: 5.7.1(prisma@5.7.1)
+    specifier: 5.22.0
+    version: 5.22.0(prisma@5.7.1)
   cat-loggr:
     specifier: ^1.2.2
     version: 1.2.2
@@ -449,8 +449,8 @@ packages:
       fastq: 1.16.0
     dev: true
 
-  /@prisma/client@5.7.1(prisma@5.7.1):
-    resolution: {integrity: sha512-TUSa4nUcC4nf/e7X3jyO1pEd6XcI/TLRCA0KjkA46RDIpxUaRsBYEOqITwXRW2c0bMFyKcCRXrH4f7h4q9oOlg==}
+  /@prisma/client@5.22.0(prisma@5.7.1):
+    resolution: {integrity: sha512-M0SVXfyHnQREBKxCgyo7sffrKttwE6R8PMq330MIUF0pTwjUhLbW84pFDlf06B27XyCR++VtjugEnIHdr07SVA==}
     engines: {node: '>=16.13'}
     requiresBuild: true
     peerDependencies:
