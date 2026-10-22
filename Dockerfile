@@ -1,11 +1,13 @@
-FROM node:20-alpine
+FROM node:24.22.1-alpine
 
 ARG PNPM_VERSION=8.15.9
 ARG PRISMA_CLI_BINARY_TARGETS=linux-musl-openssl-3.0.x
 
 ENV PRISMA_CLI_BINARY_TARGETS=$PRISMA_CLI_BINARY_TARGETS
 
-RUN apk add --no-cache openssl
+RUN apk add --no-cache openssl 'ca-certificates>=20261020-r0' \
+    && apk upgrade --no-cache ca-certificates-bundle \
+    && update-ca-certificates
 
 RUN npm install -g "pnpm@${PNPM_VERSION}"
 
