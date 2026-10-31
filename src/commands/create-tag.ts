@@ -1,10 +1,10 @@
 import {
-  SlashCommand,
-  CommandContext,
+  type CommandContext,
   ComponentType,
-  SlashCreator,
-  TextInputStyle,
-  ModalInteractionContext
+  type ModalInteractionContext,
+  SlashCommand,
+  type SlashCreator,
+  TextInputStyle
 } from 'slash-create';
 import { createTag, getTagByTrigger } from '../db';
 
@@ -67,6 +67,10 @@ export default class CreateTagCommand extends SlashCommand {
     const isPrivate = ctx.customID.split(':')[1] === 'true';
     const trigger = ctx.values.triggerInput;
     const content = ctx.values.contentInput;
+
+    if (typeof trigger !== 'string' || typeof content !== 'string') {
+      return ctx.send({ content: 'Trigger and content must be text.', ephemeral: true });
+    }
 
     // Check if trigger has spaces
     if (trigger.includes(' ')) {

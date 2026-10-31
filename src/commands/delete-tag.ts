@@ -1,4 +1,4 @@
-import { SlashCommand, CommandContext, SlashCreator, AutocompleteContext } from 'slash-create';
+import { type AutocompleteContext, type CommandContext, SlashCommand, type SlashCreator } from 'slash-create';
 import { deleteTag, getAllTags, getTag } from '../db';
 
 export default class DeleteTagCommand extends SlashCommand {

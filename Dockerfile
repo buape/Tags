@@ -1,4 +1,4 @@
-FROM node:24.22.1-alpine
+FROM node:26.5.0-alpine
 
 ARG PNPM_VERSION=8.15.9
 ARG PRISMA_CLI_BINARY_TARGETS=linux-musl-openssl-3.0.x
@@ -18,6 +18,7 @@ COPY package.json pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile --force
 
 COPY prisma ./prisma/
+COPY prisma.config.ts ./
 
 RUN pnpm exec prisma generate
 

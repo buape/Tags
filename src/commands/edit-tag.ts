@@ -1,11 +1,11 @@
 import {
-  SlashCommand,
-  CommandContext,
+  type AutocompleteContext,
+  type CommandContext,
   ComponentType,
-  SlashCreator,
-  TextInputStyle,
-  ModalInteractionContext,
-  AutocompleteContext
+  type ModalInteractionContext,
+  SlashCommand,
+  type SlashCreator,
+  TextInputStyle
 } from 'slash-create';
 import { editTag, getAllTags, getTag } from '../db';
 
@@ -77,6 +77,10 @@ export default class EditTagCommand extends SlashCommand {
     const isPrivate = ctx.customID.split(':')[2] === 'true';
     const trigger = ctx.values.triggerInput;
     const content = ctx.values.contentInput;
+
+    if (typeof trigger !== 'string' || typeof content !== 'string') {
+      return ctx.send({ content: 'Trigger and content must be text.', ephemeral: true });
+    }
 
     // Check if trigger has spaces
     if (trigger.includes(' ')) {
