@@ -1,5 +1,5 @@
-import { SlashCommand, CommandContext, SlashCreator, AutocompleteContext } from 'slash-create';
 import { EmbedBuilder } from 'discord.js';
+import { type AutocompleteContext, type CommandContext, SlashCommand, type SlashCreator } from 'slash-create';
 import { getAllTags } from '../db';
 
 export default class ListTagsCommand extends SlashCommand {
@@ -45,8 +45,7 @@ export default class ListTagsCommand extends SlashCommand {
     const embed = new EmbedBuilder().setTitle('All Tags').setDescription(tagList).setColor(0x6472e0);
 
     return ctx.send({
-      // Hacky fix to make the embed work with slash-create
-      embeds: [embed as any],
+      embeds: [embed.toJSON()],
       ephemeral: privateReply
     });
   }

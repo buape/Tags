@@ -1,10 +1,10 @@
 import {
-  SlashCommand,
-  CommandContext,
+  type CommandContext,
   ComponentType,
-  SlashCreator,
-  TextInputStyle,
-  ModalInteractionContext
+  type ModalInteractionContext,
+  SlashCommand,
+  type SlashCreator,
+  TextInputStyle
 } from 'slash-create';
 import { createTag, getTagByTrigger } from '../db';
 

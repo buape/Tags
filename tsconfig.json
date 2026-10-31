@@ -11,14 +11,8 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "typeRoots": ["./node_modules/@types", "types"],
-    "types": [],
+    "types": []
   },
-  "include": [
-    "./src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "testing",
-  ]
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "dist", "testing"]
 }

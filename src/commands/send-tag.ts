@@ -1,4 +1,4 @@
-import { SlashCommand, CommandContext, SlashCreator, AutocompleteContext } from 'slash-create';
+import { type AutocompleteContext, type CommandContext, SlashCommand, type SlashCreator } from 'slash-create';
 import { getAllTags, getTag, incrementTagUses } from '../db';
 
 export default class SendTagCommand extends SlashCommand {

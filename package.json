@@ -1,7 +1,7 @@
 {
   "name": "buape-tags",
   "version": "1.0.0",
-  "description": "🏷️ Tags allows for servers to answer the most frequent questions easier",
+  "description": "\ud83c\udff7\ufe0f Tags allows for servers to answer the most frequent questions easier",
   "author": "Codeize",
   "main": "dist/index.js",
   "scripts": {
@@ -11,8 +11,8 @@
     "build": "prisma generate && tsc",
     "dev": "tsc && slash-up sync && node dist/index.js",
     "db:push": "prisma db push",
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
     "typecheck": "prisma generate && tsc --noEmit",
     "test": "pnpm run build && node --test tests/*.test.cjs"
   },
@@ -26,18 +26,12 @@
     "slash-create": "^7.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
+    "@biomejs/biome": "2.6.4",
     "@types/node": "^26.6.6",
-    "@typescript-eslint/eslint-plugin": "^8.72.1",
-    "@typescript-eslint/parser": "^8.72.1",
-    "eslint": "^10.14.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.7",
-    "prettier": "^3.9.10",
     "prisma": "7.10.1",
     "slash-up": "^1.4.2",
     "ts-node": "^10.9.2",
-    "typescript": "~6.0.3"
+    "typescript": "~7.0.2"
   },
   "packageManager": "pnpm@8.15.9",
   "engines": {

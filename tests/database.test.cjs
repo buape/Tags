@@ -7,7 +7,16 @@ test('Prisma 7 PostgreSQL adapter preserves tag CRUD and usage tracking', {
   skip: !process.env.TAGS_TEST_DATABASE_URL
 }, async () => {
   process.env.DATABASE_URL = process.env.TAGS_TEST_DATABASE_URL;
-  const { db, createTag, getTag, getTagByTrigger, getAllTags, editTag, incrementTagUses, deleteTag } = require('../dist/db');
+  const {
+    db,
+    createTag,
+    getTag,
+    getTagByTrigger,
+    getAllTags,
+    editTag,
+    incrementTagUses,
+    deleteTag
+  } = require('../dist/db');
   const guildId = randomUUID();
   const authorId = randomUUID();
   try {

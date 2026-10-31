@@ -1,11 +1,11 @@
 import {
-  SlashCommand,
-  CommandContext,
+  type AutocompleteContext,
+  type CommandContext,
   ComponentType,
-  SlashCreator,
-  TextInputStyle,
-  ModalInteractionContext,
-  AutocompleteContext
+  type ModalInteractionContext,
+  SlashCommand,
+  type SlashCreator,
+  TextInputStyle
 } from 'slash-create';
 import { editTag, getAllTags, getTag } from '../db';
 

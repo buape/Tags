@@ -1,7 +1,7 @@
-import dotenv from 'dotenv';
-import { SlashCreator, FastifyServer } from 'slash-create';
-import path from 'path';
+import path from 'node:path';
 import CatLoggr from 'cat-loggr/ts';
+import dotenv from 'dotenv';
+import { FastifyServer, SlashCreator } from 'slash-create';
 import { db } from './db';
 
 let dotenvPath = path.join(process.cwd(), '.env');
