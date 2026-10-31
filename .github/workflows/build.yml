@@ -34,6 +34,8 @@ jobs:
           --health-cmd "pg_isready -U tags -d tags_test"
           --health-interval 5s --health-timeout 5s --health-retries 10
     env:
+      # The Ubuntu check runner needs glibc engines, not the Alpine image target.
+      PRISMA_CLI_BINARY_TARGETS: debian-openssl-3.0.x
       DATABASE_URL: postgresql://tags:local-test-only@localhost:5432/tags_test
       TAGS_TEST_DATABASE_URL: postgresql://tags:local-test-only@localhost:5432/tags_test
     steps:
