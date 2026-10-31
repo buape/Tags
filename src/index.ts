@@ -50,6 +50,12 @@ creator.on('commandRun', async (command, _, ctx) => {
 creator.on('commandRegister', (command) => logger.info(`Registered command ${command.commandName}`));
 creator.on('commandError', (command, error) => logger.error(`Command ${command.commandName}:`, error));
 
-creator.withServer(new FastifyServer()).registerCommandsIn(path.join(__dirname, 'commands')).startServer();
-
-logger.info(`Starting server at "localhost:${creator.options.serverPort}/interactions"`);
+creator.withServer(new FastifyServer());
+creator
+  .registerCommandsIn(path.join(__dirname, 'commands'))
+  .then(() => creator.startServer())
+  .then(() => logger.info(`Starting server at "localhost:${creator.options.serverPort}/interactions"`))
+  .catch((error) => {
+    logger.error(error);
+    process.exitCode = 1;
+  });

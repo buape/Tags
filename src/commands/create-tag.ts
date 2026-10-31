@@ -68,6 +68,10 @@ export default class CreateTagCommand extends SlashCommand {
     const trigger = ctx.values.triggerInput;
     const content = ctx.values.contentInput;
 
+    if (typeof trigger !== 'string' || typeof content !== 'string') {
+      return ctx.send({ content: 'Trigger and content must be text.', ephemeral: true });
+    }
+
     // Check if trigger has spaces
     if (trigger.includes(' ')) {
       return ctx.send({
