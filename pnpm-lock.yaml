@@ -28,7 +28,7 @@ dependencies:
     version: 5.12.7
   slash-create:
     specifier: ^7.0.0
-    version: 7.0.0(fastify@5.12.7)
+    version: 7.1.0(fastify@5.12.7)
 
 devDependencies:
   '@biomejs/biome':
@@ -1561,8 +1561,8 @@ packages:
     engines: {node: '>=0.8.0'}
     dev: false
 
-  /eventemitter3@5.0.1:
-    resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
+  /eventemitter3@5.0.4:
+    resolution: {integrity: sha512-mlsTRyGaPBjPedk6Bvw+aqbsXDtoAyAzm5MO7JgU+yVRyMQ5O8bD4Kcci7BS85f93veegeCPkL8R4GLClnjLFw==}
 
   /exsolve@1.2.0:
     resolution: {integrity: sha512-h1pQPR9XoeSMdntRNCjyTznaume4UpfXrULBnlkZ2CUM/G5eSa+pBByGldO5uR8dxbPC+OuJXsPPNf+JZ81ADg==}
@@ -2113,11 +2113,11 @@ packages:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
 
-  /slash-create@7.0.0(fastify@5.12.7):
-    resolution: {integrity: sha512-w80Os5k53ZW2xZYsumxJeV+56mohje5Ujg8eqcRRcnF9NBksfYTS4PbXZGwhnd6CPE5jTEf1+K1X1XqUB/3z8w==}
+  /slash-create@7.1.0(fastify@5.12.7):
+    resolution: {integrity: sha512-0WAW6gP7RjGRwHAXNH8elv+izy3AyHoPXsTz6j+z4FiKyazWfC8LJb5naHvn/oLBNpnAWY+qn9jyGqIR8GHCTQ==}
     engines: {node: '>=18.17'}
     peerDependencies:
-      express: ^4
+      express: ^4 || ^5
       fastify: ^3 || ^4 || ^5
     peerDependenciesMeta:
       express:
@@ -2126,7 +2126,7 @@ packages:
         optional: true
     dependencies:
       dequal: 2.0.3
-      eventemitter3: 5.0.1
+      eventemitter3: 5.0.4
       fastify: 5.12.7
       tweetnacl: 1.0.3
       undici: 6.29.1
@@ -2145,7 +2145,7 @@ packages:
       enquirer: 2.4.1
       find-up: 5.0.0
       log-symbols: 4.1.0
-      slash-create: 7.0.0(fastify@5.12.7)
+      slash-create: 7.1.0(fastify@5.12.7)
       yargs: 17.7.2
     transitivePeerDependencies:
       - express
