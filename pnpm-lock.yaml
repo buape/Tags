@@ -19,7 +19,7 @@ dependencies:
     version: 1.2.2
   discord.js:
     specifier: ^14.28.0
-    version: 14.28.0
+    version: 14.28.1
   dotenv:
     specifier: ^18.0.9
     version: 18.0.9
@@ -39,7 +39,7 @@ devDependencies:
     version: 26.6.6
   prisma:
     specifier: 7.10.1
-    version: 7.10.1(@types/node@26.6.6)(@types/react@19.3.0)(react-dom@19.3.1)(react@19.3.1)(typescript@7.0.2)
+    version: 7.10.1(@types/node@26.6.6)(@types/react@19.3.3)(react-dom@19.3.1)(react@19.3.1)(typescript@7.0.2)
   slash-up:
     specifier: ^1.4.2
     version: 1.4.2(fastify@5.12.7)
@@ -173,7 +173,7 @@ packages:
       '@discordjs/formatters': 0.6.2
       '@discordjs/util': 1.2.0
       '@sapphire/shapeshift': 4.0.0
-      discord-api-types: 0.38.57
+      discord-api-types: 0.38.60
       fast-deep-equal: 3.1.3
       ts-mixer: 6.0.4
       tslib: 2.9.1
@@ -193,7 +193,7 @@ packages:
     resolution: {integrity: sha512-y4UPwWhH6vChKRkGdMB4odasUbHOUwy7KL+OVwF86PvT6QVOwElx+TiI1/6kcmcEe+g5YRXJFiXSXUdabqZOvQ==}
     engines: {node: '>=16.11.0'}
     dependencies:
-      discord-api-types: 0.38.57
+      discord-api-types: 0.38.60
     dev: false
 
   /@discordjs/rest@2.6.3:
@@ -205,7 +205,7 @@ packages:
       '@sapphire/async-queue': 1.5.5
       '@sapphire/snowflake': 3.5.5
       '@vladfrangu/async_event_emitter': 2.4.7
-      discord-api-types: 0.38.57
+      discord-api-types: 0.38.60
       magic-bytes.js: 1.13.1
       tslib: 2.9.1
       undici: 6.29.1
@@ -215,7 +215,7 @@ packages:
     resolution: {integrity: sha512-3LKP7F2+atl9vJFhaBjn4nOaSWahZ/yWjOvA4e5pnXkt2qyXRCHLxoBQy81GFtLGCq7K9lPm9R517M1U+/90Qg==}
     engines: {node: '>=18'}
     dependencies:
-      discord-api-types: 0.38.57
+      discord-api-types: 0.38.60
     dev: false
 
   /@discordjs/ws@1.2.3:
@@ -227,10 +227,10 @@ packages:
       '@discordjs/util': 1.2.0
       '@sapphire/async-queue': 1.5.5
       '@types/ws': 8.18.2
-      '@vladfrangu/async_event_emitter': 2.2.4
-      discord-api-types: 0.38.57
+      '@vladfrangu/async_event_emitter': 2.4.7
+      discord-api-types: 0.38.60
       tslib: 2.9.1
-      ws: 8.22.1
+      ws: 8.23.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -545,7 +545,7 @@ packages:
         optional: true
     dependencies:
       '@prisma/client-runtime-utils': 7.10.1
-      prisma: 7.10.1(@types/node@26.6.6)(@types/react@19.3.0)(react-dom@19.3.1)(react@19.3.1)(typescript@7.0.2)
+      prisma: 7.10.1(@types/node@26.6.6)(@types/react@19.3.3)(react-dom@19.3.1)(react@19.3.1)(typescript@7.0.2)
       typescript: 7.0.2
     dev: false
 
@@ -633,7 +633,7 @@ packages:
       env-paths: 3.0.0
       proper-lockfile: 4.1.2
 
-  /@prisma/studio-core@0.33.0(@types/react@19.3.0)(react-dom@19.3.1)(react@19.3.1):
+  /@prisma/studio-core@0.33.0(@types/react@19.3.3)(react-dom@19.3.1)(react@19.3.1):
     resolution: {integrity: sha512-V2fX/nKEymNTrHXwfP26PGjoLStO35Ogu+ex7CFJbLrMYEcZxxZpiSNOs7px23Hk5mzLWvM5RsqG6Ka+rha+wg==}
     engines: {node: ^20.19 || ^22.12 || >=24.0, pnpm: '8'}
     peerDependencies:
@@ -641,8 +641,8 @@ packages:
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
     dependencies:
-      '@radix-ui/react-toggle': 1.1.10(@types/react@19.3.0)(react-dom@19.3.1)(react@19.3.1)
-      '@types/react': 19.3.0
+      '@radix-ui/react-toggle': 1.1.10(@types/react@19.3.3)(react-dom@19.3.1)(react@19.3.1)
+      '@types/react': 19.3.3
       '@visx/curve': 4.0.1-alpha.0
       '@visx/event': 4.0.1-alpha.0
       '@visx/grid': 4.0.1-alpha.0(react@19.3.1)
@@ -661,7 +661,7 @@ packages:
   /@radix-ui/primitive@1.1.3:
     resolution: {integrity: sha512-JTF99U/6XIjCBo0wqkU5sK10glYe27MRRsfwoiq5zzOEZLHU3A3KCMa5X/azekYRCJ0HlwI0crAXS/5dEHTzDg==}
 
-  /@radix-ui/react-compose-refs@1.1.2(@types/react@19.3.0)(react@19.3.1):
+  /@radix-ui/react-compose-refs@1.1.2(@types/react@19.3.3)(react@19.3.1):
     resolution: {integrity: sha512-z4eqJvfiNnFMHIIvXP3CY57y2WJs5g2v3X0zm9mEJkrkNv4rDxu+sg9Jh8EkXyeqBkB7SOcboo9dMVqhyrACIg==}
     peerDependencies:
       '@types/react': '*'
@@ -670,10 +670,10 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@types/react': 19.3.0
+      '@types/react': 19.3.3
       react: 19.3.1
 
-  /@radix-ui/react-primitive@2.1.3(@types/react@19.3.0)(react-dom@19.3.1)(react@19.3.1):
+  /@radix-ui/react-primitive@2.1.3(@types/react@19.3.3)(react-dom@19.3.1)(react@19.3.1):
     resolution: {integrity: sha512-m9gTwRkhy2lvCPe6QJp4d3G1TYEUHn/FzJUtq9MjH46an1wJU+GdoGC5VLof8RX8Ft/DlpshApkhswDLZzHIcQ==}
     peerDependencies:
       '@types/react': '*'
@@ -686,12 +686,12 @@ packages:
       '@types/react-dom':
         optional: true
     dependencies:
-      '@radix-ui/react-slot': 1.2.3(@types/react@19.3.0)(react@19.3.1)
-      '@types/react': 19.3.0
+      '@radix-ui/react-slot': 1.2.3(@types/react@19.3.3)(react@19.3.1)
+      '@types/react': 19.3.3
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
 
-  /@radix-ui/react-slot@1.2.3(@types/react@19.3.0)(react@19.3.1):
+  /@radix-ui/react-slot@1.2.3(@types/react@19.3.3)(react@19.3.1):
     resolution: {integrity: sha512-aeNmHnBxbi2St0au6VBVC7JXFlhLlOnvIIlePNniyUNAClzmtAUEY8/pBiK3iHjufOlwA+c20/8jngo7xcrg8A==}
     peerDependencies:
       '@types/react': '*'
@@ -700,11 +700,11 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@radix-ui/react-compose-refs': 1.1.2(@types/react@19.3.0)(react@19.3.1)
-      '@types/react': 19.3.0
+      '@radix-ui/react-compose-refs': 1.1.2(@types/react@19.3.3)(react@19.3.1)
+      '@types/react': 19.3.3
       react: 19.3.1
 
-  /@radix-ui/react-toggle@1.1.10(@types/react@19.3.0)(react-dom@19.3.1)(react@19.3.1):
+  /@radix-ui/react-toggle@1.1.10(@types/react@19.3.3)(react-dom@19.3.1)(react@19.3.1):
     resolution: {integrity: sha512-lS1odchhFTeZv3xwHH31YPObmJn8gOg7Lq12inrr0+BH/l3Tsq32VfjqH1oh80ARM3mlkfMic15n0kg4sD1poQ==}
     peerDependencies:
       '@types/react': '*'
@@ -718,13 +718,13 @@ packages:
         optional: true
     dependencies:
       '@radix-ui/primitive': 1.1.3
-      '@radix-ui/react-primitive': 2.1.3(@types/react@19.3.0)(react-dom@19.3.1)(react@19.3.1)
-      '@radix-ui/react-use-controllable-state': 1.2.2(@types/react@19.3.0)(react@19.3.1)
-      '@types/react': 19.3.0
+      '@radix-ui/react-primitive': 2.1.3(@types/react@19.3.3)(react-dom@19.3.1)(react@19.3.1)
+      '@radix-ui/react-use-controllable-state': 1.2.2(@types/react@19.3.3)(react@19.3.1)
+      '@types/react': 19.3.3
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
 
-  /@radix-ui/react-use-controllable-state@1.2.2(@types/react@19.3.0)(react@19.3.1):
+  /@radix-ui/react-use-controllable-state@1.2.2(@types/react@19.3.3)(react@19.3.1):
     resolution: {integrity: sha512-BjasUjixPFdS+NKkypcyyN5Pmg83Olst0+c6vGov0diwTEo6mgdqVR6hxcEgFuh4QrAs7Rc+9KuGJ9TVCj0Zzg==}
     peerDependencies:
       '@types/react': '*'
@@ -733,12 +733,12 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@radix-ui/react-use-effect-event': 0.0.2(@types/react@19.3.0)(react@19.3.1)
-      '@radix-ui/react-use-layout-effect': 1.1.1(@types/react@19.3.0)(react@19.3.1)
-      '@types/react': 19.3.0
+      '@radix-ui/react-use-effect-event': 0.0.2(@types/react@19.3.3)(react@19.3.1)
+      '@radix-ui/react-use-layout-effect': 1.1.1(@types/react@19.3.3)(react@19.3.1)
+      '@types/react': 19.3.3
       react: 19.3.1
 
-  /@radix-ui/react-use-effect-event@0.0.2(@types/react@19.3.0)(react@19.3.1):
+  /@radix-ui/react-use-effect-event@0.0.2(@types/react@19.3.3)(react@19.3.1):
     resolution: {integrity: sha512-Qp8WbZOBe+blgpuUT+lw2xheLP8q0oatc9UpmiemEICxGvFLYmHm9QowVZGHtJlGbS6A6yJ3iViad/2cVjnOiA==}
     peerDependencies:
       '@types/react': '*'
@@ -747,11 +747,11 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@radix-ui/react-use-layout-effect': 1.1.1(@types/react@19.3.0)(react@19.3.1)
-      '@types/react': 19.3.0
+      '@radix-ui/react-use-layout-effect': 1.1.1(@types/react@19.3.3)(react@19.3.1)
+      '@types/react': 19.3.3
       react: 19.3.1
 
-  /@radix-ui/react-use-layout-effect@1.1.1(@types/react@19.3.0)(react@19.3.1):
+  /@radix-ui/react-use-layout-effect@1.1.1(@types/react@19.3.3)(react@19.3.1):
     resolution: {integrity: sha512-RbJRS4UWQFkzHTTwVymMTUv8EqYhOp8dOOviLj2ugtTiXRaRQS7GLGxZTLL1jWhMeoSCf5zmcZkqTl9IiYfXcQ==}
     peerDependencies:
       '@types/react': '*'
@@ -760,7 +760,7 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@types/react': 19.3.0
+      '@types/react': 19.3.3
       react: 19.3.1
 
   /@sapphire/async-queue@1.5.5:
@@ -771,6 +771,7 @@ packages:
   /@sapphire/shapeshift@4.0.0:
     resolution: {integrity: sha512-d9dUmWVA7MMiKobL3VpLF8P2aeanRTu6ypG2OIaEv/ZHH/SUQ2iHOVyi5wAPjQ+HmnMuL0whK9ez8I/raWbtIg==}
     engines: {node: '>=v16'}
+    deprecated: Shapeshift was created when other validation libraries had significant limitations in performance and error reporting. Those advantages have diminished as libraries such as Zod have become faster and improved their error messages, while also gaining broader environment support, a larger community, and custom error printers.
     dependencies:
       fast-deep-equal: 3.1.3
       lodash: 4.18.1
@@ -871,10 +872,15 @@ packages:
     dependencies:
       csstype: 3.2.3
 
+  /@types/react@19.3.3:
+    resolution: {integrity: sha512-K8uWpJc4teiuOPdiP1umjeA9rGMgVPiXuoL66fcS1QlwBT1WMqY8PORmub9FadopIs+RCW6siYEs7Lpq+vDlog==}
+    dependencies:
+      csstype: 3.2.4
+
   /@types/ws@8.18.2:
     resolution: {integrity: sha512-67MQl+fpWKVTT1NYdnmo3U4sc/xPo/zQBncVnI74qmQa0z/b+1g6iYqNmGCPbxO+zz2aklb08a0oHfegiVd0/w==}
     dependencies:
-      '@types/node': 24.19.2
+      '@types/node': 26.6.6
     dev: false
 
   /@typescript/typescript-aix-ppc64@7.0.2:
@@ -1131,11 +1137,6 @@ packages:
       d3-time-format: 4.1.0
       internmap: 2.0.3
 
-  /@vladfrangu/async_event_emitter@2.2.4:
-    resolution: {integrity: sha512-ButUPz9E9cXMLgvAW8aLAKKJJsPu1dY1/l/E8xzLFuysowXygs6GBcyunK9rnGC4zTsnIc2mQo71rGw9U+Ykug==}
-    engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
-    dev: false
-
   /@vladfrangu/async_event_emitter@2.4.7:
     resolution: {integrity: sha512-Xfe6rpCTxSxfbswi/W/Pz7zp1WWSNn4A0eW4mLkQUewCrXXtMj31lCg+iQyTkh/CkusZSq9eDflu7tjEDXUY6g==}
     engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
@@ -1347,6 +1348,9 @@ packages:
   /csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
 
+  /csstype@3.2.4:
+    resolution: {integrity: sha512-PoKaoPzQapnEoqUSnHx1u6W6ku8CVEgKsnpmmzU3m1nwkidpPBQ8V/Zq2+bWNrsOKoKLwTGdbx6xF7BXP1zLVQ==}
+
   /d3-array@3.2.1:
     resolution: {integrity: sha512-gUY/qeHq/yNqqoCKNq4vtpFLdoCdvyNpWoC/KNjhGbhDuQpAM9sIQQKkXSNpXa9h5KySs/gzm7R88WkUutgwWQ==}
     engines: {node: '>=12'}
@@ -1451,12 +1455,12 @@ packages:
     engines: {node: '>=0.3.1'}
     dev: true
 
-  /discord-api-types@0.38.57:
-    resolution: {integrity: sha512-R1CTSSt4RshqCq23j2Xq2ZscvzB4LzG9OB1CYQdKUGdw8Ti/oF/72EEtK2mNpagG/Vj9NcBT7dw9lKLf+Dacfg==}
+  /discord-api-types@0.38.60:
+    resolution: {integrity: sha512-2xPScuQP3WOf3H4EKWLzvnhlfNl8sBMD+krT8CcjMVJa6o9D/6ssOSgKPTvHyIhQDKUX+gvUJZ43U4HqE+6tsA==}
     dev: false
 
-  /discord.js@14.28.0:
-    resolution: {integrity: sha512-l/mIllvqvWQDWqa8NPw7b2AU2tM9oPWiWR6Jk54DTNlUdyArXbi+Y0m0sLIUtQ9O0x+tyVpDMCG6K6Kf0yeAWQ==}
+  /discord.js@14.28.1:
+    resolution: {integrity: sha512-Je5OcqgurnIUQK4vR+gQnmzOf/lNQsD6d/UkV8ZOj+bFa5zJXPyiGXlbywp2EagwshVT18y7YNQNSRd3FjYkDw==}
     engines: {node: '>=18'}
     dependencies:
       '@discordjs/builders': 1.15.0
@@ -1466,7 +1470,7 @@ packages:
       '@discordjs/util': 1.2.0
       '@discordjs/ws': 1.2.3
       '@sapphire/snowflake': 3.5.5
-      discord-api-types: 0.38.57
+      discord-api-types: 0.38.60
       fast-deep-equal: 3.1.3
       lodash.snakecase: 4.1.1
       magic-bytes.js: 1.13.1
@@ -1965,7 +1969,7 @@ packages:
     resolution: {integrity: sha512-Jtc2612XINuBjIl/QTWsV5UvE8UHuNblcO3vVADSrKsrc6RqGX6lOW1cEo3CM2v0XG4Nat8nI+YM7/f26VxXLw==}
     engines: {node: '>=12'}
 
-  /prisma@7.10.1(@types/node@26.6.6)(@types/react@19.3.0)(react-dom@19.3.1)(react@19.3.1)(typescript@7.0.2):
+  /prisma@7.10.1(@types/node@26.6.6)(@types/react@19.3.3)(react-dom@19.3.1)(react@19.3.1)(typescript@7.0.2):
     resolution: {integrity: sha512-GoVeErHGGtsSjsflQ1r2BA3RKTXtxNraQJz8OLkLhoLr7OgCscdx4qw4WMM4HnERYc+a1cq2VnMNbep+vOjNcQ==}
     engines: {node: ^20.19 || ^22.12 || >=24.0}
     hasBin: true
@@ -1982,7 +1986,7 @@ packages:
       '@prisma/config': 7.10.1
       '@prisma/dev': 0.24.17(typescript@7.0.2)
       '@prisma/engines': 7.10.1
-      '@prisma/studio-core': 0.33.0(@types/react@19.3.0)(react-dom@19.3.1)(react@19.3.1)
+      '@prisma/studio-core': 0.33.0(@types/react@19.3.3)(react-dom@19.3.1)(react@19.3.1)
       mysql2: 3.24.4(@types/node@26.6.6)
       postgres: 3.4.7
       typescript: 7.0.2
@@ -2329,8 +2333,8 @@ packages:
       strip-ansi: 6.0.1
     dev: true
 
-  /ws@8.22.1:
-    resolution: {integrity: sha512-oyL6OPYme/CmiFvNuGzeoxCJ4nOrZE2O1FwM9MWM1AsGri6nLXB2pg+lNA8aLeXMSav0J6eIVS1j6vUPzUtK9g==}
+  /ws@8.23.0:
+    resolution: {integrity: sha512-wCkmX8QMOrKjgO8HW2WyDbTSGeqkocxgDzS9iR79rEAexty6/2qzilx3Ag8Tqf9ykop3irLKle0MtVn5qjVnoQ==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
